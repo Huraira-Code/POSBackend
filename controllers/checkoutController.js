@@ -62,8 +62,8 @@ const createCheckoutSession = async (req, res) => {
         quantity: 1,
       }],
       mode: "payment",
-      success_url: `http://localhost:3000/payment-success?session_id={CHECKOUT_SESSION_ID}&name=${encodeURIComponent(name)}&email=${encodeURIComponent(email)}&packageId=${pkg._id}`,
-      cancel_url: "http://localhost:3000",
+      success_url: `https://effortless-gelato-1e8e12.netlify.app/payment-success?session_id={CHECKOUT_SESSION_ID}&name=${encodeURIComponent(name)}&email=${encodeURIComponent(email)}&packageId=${pkg._id}`,
+      cancel_url: "https://effortless-gelato-1e8e12.netlify.app",
     });
 
     return res.status(200).json({ sessionId: session.id });
